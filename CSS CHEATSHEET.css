@@ -1,0 +1,537 @@
+/*======================================================================================================================
+SELECTORS
+======================================================================================================================*/
+div {
+  /* This will apply to all div tags.*/
+  display: none;
+}
+
+#id {
+  /* This will apply to all tags with id="id". */
+  display: none;
+}
+
+.class {
+  /* This will apply to all tags with class="class". */
+  display: none;
+}
+
+div#id.class {
+  /* This will apply to all div tags with id="id" and class="class". */
+  display: none;
+}
+
+.containerClass div {
+  /* This will apply to all div tags within any tag with class="containerClass", recursive. */
+  display: none;
+}
+/*====================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+MOST COMMON ATTRIBUTES
+======================================================================================================================*/
+div {
+  /* COLORS */
+  /* Sets the background color. */
+  background-color: lightgreen;
+
+  /* TEXT */
+  /* The color of the text within the element. */
+  color: black;                       /* Color of the text. */
+  /* The alignment of the text within the element. */
+  text-align: center;
+  /* The vertical alignment of elements within this element. You can apply this to a span with text in it to make it
+  supertext or subtext. Can also be used for images. */
+  /* Commented out because tehy create an error.
+  vertical-align: sub;
+  vertical-align: super; */
+  /* Text decorations. Useful if you want an underline, overline, etc.*/
+  text-decoration-line: overline underline;
+  text-decoration-color: black;
+  text-decoration-style: double;
+  text-decoration-thickness: auto;
+  /* This removes any decoration. Useful for links (<a></a>) because they have underlines by default. */
+  text-decoration: none;
+  /* Transforms the case of the text. */
+  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  /* Indents the text. */
+  text-indent: 50px;
+  /* Changes the space between letters. */
+  letter-spacing: 5px;
+  /* Changes the spacing between lines. */
+  line-height: 1.0;
+  /* Changes the spacing between words. */
+  word-spacing: 10px;
+
+  /* Sets the font family for the text. */
+  /* The browser will use the first available font from left to right. */
+  font-family: "Times New Roman", Times, serif;
+  /* Sets the style. Typically either italic or oblique. */
+  font-style: normal;
+  font-style: italic;
+  font-style: oblique;
+  /* Sets the weight. Typically for bold. */
+  font-weight: normal;
+  font-weight: lighter;
+  font-weight: bold;
+  font-weight: bolder;
+  /* Sets the font variant. A fun value here is small-caps, which turns your lowercase letters into smaller capital
+  letters. */
+  font-variant: normal;
+  font-variant: small-caps;
+  /* Sets the font size. You can use px as your units, but it is much more common to use em. 1em is 16px by default.
+  When the user adjusts the size of text in their browser, em text will change size, but text with a hard coded pixel
+  size will not. This is why em is used. */
+  font-size: 2em;
+  font-size: 14px;
+  /* See the link below if you want some common google font pairings that work very well and look good.
+  https://www.w3schools.com/css/css_font_pairings.asp */
+
+  /* What follows are the attributes that define content, padding, border, outline, and margin. It is important to
+  understand what these are and the difference between them. */
+
+  /* CONTENT */
+  /* When you set the width and height, you set the width and height of the content area. This is the area of the
+  element when your content actually appears.*/
+  width: 100px;
+  height: 100px;
+  /* Not that this uses px for units, but you can also use % as well as many other units. */
+  width: 50%;
+
+  /* PADDING */
+  /* Padding is an area between your content and your border. It is just an area of padding that puts some space
+  between your content and your border. */
+  /* Sets the padding fo the top, right, bottom, and left in that order. */
+  padding: 50px 50px 50px 50px;
+  /* Sets the padding for the top/bottom and then left/right. */
+  padding: 50px 50px;
+  /* Sets the padding for all of them. This works for magin as well. */
+  padding: 50px;
+
+  /* BORDERS */
+  /* The border is an area outside your padding that you can give color and style to. */
+  /* Sets the style of the border. */
+  border-style: solid;
+  /* Sets the width of the border. */
+  border-width: thick;
+  /* Sets the color of the border. */
+  border-color: green;
+  /* A shorthand. Sets the style, width, and color of the border. */
+  border: thick solid green;
+  /* The border radius if you want a border with rounded corners. */
+  border-radius: 10px;
+
+  /* MARGIN */
+  /* The margin is the area outside of the border. It is an area where no border/padding/content of another element
+  should be able to intersect. Note that margins of elements can intersect. */
+  /* Sets every margin individually. */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  /* Alternative methods. */
+  margin: 20px 20px;
+  margin: 20px;
+  /* Setting a margin to auto essentially makes the margin as wide as possible. This has the effect of horizontally
+  centering the element. */
+  margin: auto;
+  /* If you want to right-justify the element, use the attributes below. */
+  margin-left: auto;
+  margin-right: 0;
+
+  /* OUTLINE */
+  /* The outline is like a border, except that it is drawn into the margins. It is thus outside the border. They do
+  not change the elements size, so outlines serve more as a highlighting tool than a design tool, like borders. */
+  outline: thin solid black;
+
+  /* DISPLAY */
+  /* Perhaps one of the most important attributes. Determines how the element is displayed. Most common values are
+  below, but there is a better description of the display attribute elsewhere in this document.*/
+  display: block;
+  display: inline;
+  display: inline-block;
+  /* Makes the element invisible. */
+  display: none;
+}
+/*====================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+LINK AND BUTTON STATES
+======================================================================================================================*/
+
+a {
+  /* Removes the underline from a link. */
+  text-decoration: none;
+  /* Adds a cursor when you mouse over an element. Useful and fun. */
+  cursor: auto;
+}
+
+a:link {
+  /* The style of a link when it has not been clicked. */
+  /* Only applies to links. */
+  color: black;
+}
+
+a:visited {
+  /* The style of a link when it has been clicked. */
+  /* Only applies to links. */
+  color: grey;
+}
+
+a:hover {
+  /* The style of a link or button when the mouse is hovering over it. */
+  /* Applies to buttons and links. */
+  color: blue;
+}
+
+a:active {
+  /* The style of a link or button when it is being clicked. */
+  /* Applies to buttons and links. */
+  color: red;
+}
+
+/*====================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+DISPLAY ATTRIBUTE
+========================================================================================================================
+The display style attribute determines how an element is displayed. The following are some of the most important values
+for display, but there are many others.
+
+  display: inline;
+The element displays like an inline element. Height and width attributes have no effect. This typically applies by
+default to most elements, like <span>.
+
+  display: block;
+The element starts on a new line and takes up the whole entire width. This typically applies by default to elements like
+<div> and <p>.
+
+  display: inline-block;
+The element displays as a hybrid between inline and block. Like inline, it does not take up a whole entire line.
+Elements can be to both sides of it. Like block, its width/height can be adjusted and its top/bottom padding/margins are
+respected. This typically applies by default to elements like <img>.
+
+  display: grid;
+  display: inline-grid;
+The element will display like a grid. See the grid section for more detail. grid displays like a block. inline-grid
+displays like an inline.
+
+  display: flex;
+  display: inline-flex;
+This element will display like a flexbox. See the flexbox section for more detail. flex displays like a block.
+inline-flex displays like an inline.
+======================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+GRIDS
+========================================================================================================================
+Use a grid when you want to display elements like a grid. Every element that is a direct child of the element that is
+set to display like a grid will be considered items in the grid and will obey the rules of the grid. The grid controls
+mainly the size and positioning of the elements.
+
+---------- FOR THE GRID ELEMENT ITSELF ----------
+
+  display: grid;
+  display: inline-grid;
+These are the two ways to make a grid. With grid it displays like a block. With inline-grid it displays like an inline.
+
+  grid-template-rows: 20px 40px 20px;
+  grid-template-columns: auto 80% auto;
+  grid-template: 20px 40px 20x / auto 80% auto;
+  grid-template: repeat(16, 16px) / repeat(32, 16px);
+These attributes should be assigned a list of values. Each value is the width/height of the row/column. The number of
+values indicates the number of rows/columns. The grid-template attribute is a shorthand for the other two in row /
+column format. You can use the repeat(n, value) function to repeat value n times. This allows you to easily set the
+number and size of rows and columns.
+
+  grid-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+This places a gap between the elements. grid-gap is shorthand for assigning both row-gap and column-gap to the same
+value.
+
+---------- FOR GRID ITEM ELEMENTS ----------
+
+  grid-row-start: 0;
+  grid-column-start: 0;
+Specifies which row/column the grid should start on.
+
+  grid-row-end: span 2;
+  grid-column-end: span 2;
+  grid-row-end: 2;
+  grid-column-end span 2;
+Specifies either how many row/columns to span (if written with span). Alternatively specifies which row/column exactly
+to end on.
+
+  grid-area: 1 / 2 / span 1 / span 2;
+This is a shorthand for using the row/column start/end attributes. Goes in this order: row-start / column-start /
+row-end / column-end.
+
+EXAMPLE: Makes a grid that is 3 columns wide and 2 rows tall.
+
+*/
+.grid {
+  background-color: lightblue;
+  border: thin solid blue;
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(3, auto);
+  grid-gap: 5px;
+  text-align: center;
+}
+
+.gridItem {
+  background-color: lightgreen;
+  border: thin solid green;
+}
+/*
+<div class="grid">
+  <div class="gridItem">0</div>
+  <div class="gridItem">1</div>
+  <div class="gridItem">2</div>
+  <div class="gridItem">3</div>
+</div>
+======================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+FLEX BOXES
+========================================================================================================================
+A flex box is sort of like a one dimensional grid. Every element that is a direct child of the element that is set to
+display like a flex box will be considered items in the flex box and will obey the rules of the flex box. Unlike with
+grids, where mainly the grid itself controls the size and positioning of its elements, a flex box controls the size but
+also the direction, either horizontal or vertical and optionally in reverse.
+
+---------- FOR THE FLEX ITSELF ----------
+
+  display: flex;
+  display: inline-flex;
+The two ways to display a flex. Either like a block or like an inline.
+
+  flex-direction: row;
+  flex-direction: column;
+  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+This sets the direction and order that the internal elements of the flexbox are displayed in.
+
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+This sets what to do if the elements overflow. When set to nowrap, it wraps in the opposite direction. For example, if
+flex-direction is row, it will wrap to a row above instead of a row below.
+
+  flex-flow: row wrap-reverse;
+This is a shorthand for flex-direction and flex-wrap.
+
+  justify-content: center;          <- centers the items
+  justify-content: flex-start;      <- aligns to the start
+  justify-content: flex-end;        <- aligns to the end
+  justify-content: space-around;    <- puts equal space around every element
+  justify-content: space-between;   <- puts equal space between every element (excludes start and end)
+This determines the alignment of the elements ALONG THE DIRECTION OF FLEX.
+
+  align-items: center;              <- centers the items
+  align-items: flex-start;          <- aligns to the start
+  align-items: flex-end;            <- aligns to the end
+  align-items: flex-stretch;        <- stretches items to fill (default)
+  align-items: baseline             <- aligns the items in a line along the text baseline.
+Just like justify content, this determines the alignment of items, but OPPOSITE THE DIRECTION OF FLEX. flex-stretch is
+the default and if there are multiple lines they will have equal stretch (dividing the total length).
+
+  align-content: center;            <- centers the lines
+  align-content: flex-start;        <- aligns to the start
+  align-content: flex-end;          <- aligns to the end
+  align-content: stretch;           <- stretches lines to fill (default)
+  align-content: space-around;      <- puts equal space around every line
+  align-content: space-between;     <- puts equal space between every line
+This is sort of like align-items except it applies to lines instead of items. Think of a line as being its own div and
+this attribute as describing how to align those divs.
+
+---------- FOR FLEX ITEMS ----------
+
+There are a lot of attributes here but I am not going into it because I will rarely use them.
+
+https://www.w3schools.com/css/css3_flexbox_items.asp
+
+EXAMPLE: Makes a flex of 5 equally spaced elements.
+
+*/
+.flex {
+  background-color: lightblue;
+  border: thin solid blue;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.flexItem {
+  background-color: lightgreen;
+  border: thin solid green;
+}
+/*
+<div class="flex">
+  <div class="flexItem">0</div>
+  <div class="flexItem">1</div>
+  <div class="flexItem">2</div>
+  <div class="flexItem">3</div>
+  <div class="flexItem">4</div>
+</div>
+======================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+OVERFLOW ATTRIBUTE
+========================================================================================================================
+  overflow: visible;  <- Default. Content is visible and may spill out.
+  overflow: hidden;   <- Content outside will be hidden.
+  overflow: scroll;   <- Scrollbars are added.
+  overflow: auto;     <- Scrollbars are added, but only when necessary.
+  overflow-x: auto;   <- Sets overflow but only for x-axis overflow.
+  overflow-y: auto;   <- Sets overflow but only for y-axis overflow.
+Sets the overflow behavior of the element. If the elements within an element cannot fit within the element due to the
+element's size restrctions, they will overflow in accordance with the overflow behavior specified here.
+======================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+EXAMPLE DROPDOWN: MENU BUTTONS
+========================================================================================================================
+WHAT THIS DOES:
+  - Creates a dropdown menu nested inside an inline-block span. The span is exactly as wide as necessary to accommodate
+  the longest button and all buttons are the same length.
+
+HOW THIS WORKS:
+  - When an element has a position of absolute, it will be located relative to the first ancestor it has that is
+  positioned. We want DropDownContent to be directly below the DropDown span, so we set DropDown's positon to relative
+  and DropDownContent's position to absolute. Note that setting an element's position to relative WITHOUT setting
+  anything for the top, bottom, left, or right attributes will make the element where it normally goes, since 'relative'
+  is relative to where it normally goes, so the position of DropDown doesn't actually change.
+  - By default, DropDownContent will have a display of none. This contains everything invisible when not dropping down.
+  We also set its z-index to 1 which makes it render over all the other elements when it is visible.
+  - We set DropDownContent to display as a block when anything inside DropDown is hovered over. This makes it visible.
+  - Everything inside the DropDown span is set to 100% width to be as wide as possible, basically as wide as the span,
+  while the span itself is set to inline-block, meaning it is as small as possible to fit everything inside. This makes
+  all the content inside fit the full width of the span, I.E. the largest element.
+
+NOTE: This needs work. It doesn't work.
+*/
+.DropDown {
+  display: inline-block;
+  position: relative;
+}
+
+.DropDownContent {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.DropDownHeaderButton {
+  display: block;
+  width: 100%;
+}
+
+.DropDownContentButton {
+  display: block;
+  width: 100%;
+}
+
+.DropDown:hover .DropDownContent {
+  display: block;
+}
+/*
+<span class="DropDown">
+  <div class="DropDownHeaderButton">Dropdown</div>
+  <div class="DropDownContent">
+    <button class="DropDownContentButton">Button 1</button>
+    <button class="DropDownContentButton">Button 2</button>
+    <button class="DropDownContentButton">Button 3</button>
+  </div>
+</span>
+======================================================================================================================*/
+
+
+
+
+
+/*======================================================================================================================
+TIPS FOR ARRANGING ELEMENTS
+========================================================================================================================
+  <div></div>
+- <div>s are the most basic BLOCK element.
+- By default they occupy an entire line.
+- They will stretching to fill as much width as it can depending on their parent element.
+- You can set its height and width attributes and they will be respected.
+- You can set its top and bottom padding and margins and they will be respected.
+- If you want to center them, set "margin: auto;"
+
+  <span></span>
+- <span>s are the most basic INLINE element.
+- By default they allow do not occupy an entire line.
+- They are only as large as necessary to contain the content within them.
+- Their height and width will not be respected.
+- Their top and bottom padding and margins will not be respected.
+- They are not block elements. Think of them more like having text. If they have too much content that they would extend
+outside of their parent element, then instead they will wrap.
+- Because spans are like text, if you want to center them center the contents of the parent div using text-align:
+center.
+
+  <span style={{display: "inline-block"}}></span>
+- This is another powerful element, a <span> but with its display set to inline-block.
+- It is inline in the sense that it does not take up the whole line.
+- They will attempt to be only as large as necessary to contain the content within them.
+- However, like a block, its height and width will be respected.
+- Its top and bottom padding and margins will also be respected.
+- It is also a block, so you can no longer think of it as containing text.
+- It will not "wrap" like text does, instead it will appear on the line that it fits.
+
+HOW TO RESIZE ELEMENTS:
+  - This can only be done to block or inline-block elements.
+  - Basically, set their "width" and/or "height" attributes.
+
+HOW TO JUSTIFY / ALIGN ELEMENTS:
+- If the elements to justify/align are inline (<span>, inline-block, etc.):
+  - The containing element should have the attribute "text-align" set to one of "left", "right", "center", or "justify".
+- If the element to justify/align is a block (<div>, etc.):
+  - The element should have its margins adjusted automatically.
+    - Left: This is the default. Nothing needed.
+    - Center: "margin: auto;".
+    - Right: "margin-left: auto; margin-right: 0;".
+
+WHAT DO ELEMENTS DO WHEN THEIR CONTENT IS BIGGER THAN THEM?:
+  - block and inline-block elements will expand vertically but not horizontally.
+  - block and inline-block elements WITH THEIR WIDTH AND/OR HEIGHT SET will not expand IN THAT DIRECTION. The contents
+  will spill out.
+    - If you want to prevent spill out, use the overflow attribute.
+  - inline elements expand vertically and horizontally to fit their contents. Element within will wrap like text.
+
+HOW TO HANDLE WRAPPING / OVERFLOW:
+  - User the overflow attribute.
+======================================================================================================================*/
